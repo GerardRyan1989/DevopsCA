@@ -17,7 +17,7 @@ import edu.cpp.cs580.data.provider.UserManager;
 @EnableAutoConfiguration
 @ComponentScan
 public class App {
-  
+  //comment
 	private static final Logger logger = LoggerFactory.getLogger(App.class.getName());
     /**
      * This is a good example of how Spring instantiates
