@@ -1,10 +1,12 @@
 language: java
-
+addons:
+  sonarcloud:
+    organization: "gerardryan1989-github" # the key of the org you chose at step #3
+    token:
+      secure: 172b346e6408246f9b7b579f092f5c33253eca06 # encrypted value of your token
 script:
-  mvn sonar:sonar \
-  -Dsonar.projectKey=GerardRyan1989_DevopsCA \
-  -Dsonar.organization=gerardryan1989-github \
-  -Dsonar.host.url=https://sonarcloud.io \
-  -Dsonar.login=172b346e6408246f9b7b579f092f5c33253eca06
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
 notifications:
-  #slack: gerardryan1989:kLHS9sSX8OryWYXE4YpTajfD
+  slack: gerardryan1989:kLHS9sSX8OryWYXE4YpTajfD
+
