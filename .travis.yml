@@ -7,4 +7,4 @@ script:
    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
 notifications:
-  slack: gerardryan1989:kLHS9sSX8OryWYXE4YpTajfD
+  #slack: gerardryan1989:kLHS9sSX8OryWYXE4YpTajfD
