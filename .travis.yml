@@ -7,5 +7,4 @@ script:
 
 notifications:
   slack: gerardryan1989:gXhuvWuovHTZOAjSLsTxbAjT
-  email:
-    - gerard.ryan@students.ittralee.ie
+  email: gerard.ryan@students.ittralee.ie
