@@ -4,7 +4,6 @@ addons:
     organization: "gerardryan1989-github" #the key of the org you chose at step #3
 script:
   - mvn sonar:sonar
-
 notifications:
   slack: gerardryan1989:gXhuvWuovHTZOAjSLsTxbAjT
   email: - gerard.ryan@students.ittralee.ie
