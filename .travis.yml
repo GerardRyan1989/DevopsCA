@@ -1,12 +1,10 @@
 language: java
 addons:
   sonarcloud:
-    organization: "gerardryan1989-github" # the key of the org you chose at step #3
-    token:
-      secure: 172b346e6408246f9b7b579f092f5c33253eca06 # encrypted value of your token
+    organization: "gerardryan1989-github" #the key of the org you chose at step #3
 script:
-  # other script steps might be done before running the actual analysis
-  - sonar-scanner
-notifications:
-  slack: gerardryan1989:kLHS9sSX8OryWYXE4YpTajfD
+    #the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
+notifications:
+  #slack: gerardryan1989:kLHS9sSX8OryWYXE4YpTajfD
