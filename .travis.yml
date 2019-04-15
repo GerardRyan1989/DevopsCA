@@ -9,4 +9,8 @@ script:
 notifications:
   slack: gerardryan1989:gXhuvWuovHTZOAjSLsTxbAjT
   email:
-  - gerard.ryan@students.ittralee.ie
+    recipients:
+    - gerard.ryan@students.ittralee.ie
+    - other@example.com
+    on_success: always # default: change
+    on_failure: always
