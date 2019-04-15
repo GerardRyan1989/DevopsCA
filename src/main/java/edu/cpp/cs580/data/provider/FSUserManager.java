@@ -37,7 +37,7 @@ public class FSUserManager implements UserManager {
 	 *
 	 * @return
 	 */
-	private UserMap getUserMap() {
+	public UserMap getUserMap() {
 		UserMap userMap = null;
 		File userFile = ResourceResolver.getUserFile();
 		if (userFile.exists()) {
@@ -52,12 +52,6 @@ public class FSUserManager implements UserManager {
 			userMap = new UserMap();
 		}
 		return userMap;
-	}
-
-
-	public UserMap returnGetUserMap(){
-		UserMap fs = getUserMap();
-		return fs;
 	}
 	/**
 	 * Save and persist the user map in the local file.

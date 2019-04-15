@@ -1,6 +1,7 @@
 package edu.cpp.cs580Test.data.provider;
 import edu.cpp.cs580.data.User;
 
+import edu.cpp.cs580.data.UserMap;
 import edu.cpp.cs580.data.provider.FSUserManager;
 import org.junit.Test;
 
@@ -46,7 +47,7 @@ public class UserManagerTest {
 	@Test
 	public void testUserMap(){
 	    FSUserManager fs = new FSUserManager();
-		fs.returnGetUserMap();
+		UserMap us = fs.getUserMap();
 		Assert.assertTrue(true);
 	}
 
