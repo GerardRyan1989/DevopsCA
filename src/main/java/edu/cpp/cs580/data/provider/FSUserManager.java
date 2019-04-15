@@ -54,6 +54,11 @@ public class FSUserManager implements UserManager {
 		return userMap;
 	}
 
+
+	public UserMap returnGetUserMap(){
+		UserMap fs = getUserMap();
+		return fs;
+	}
 	/**
 	 * Save and persist the user map in the local file.
 	 *

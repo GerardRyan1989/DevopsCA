@@ -43,4 +43,11 @@ public class UserManagerTest {
 		Assert.assertTrue(true);
 	}
 
+	@Test
+	public void testUserMap(){
+	    FSUserManager fs = new FSUserManager();
+		fs.returnGetUserMap();
+		Assert.assertTrue(true);
+	}
+
 }
