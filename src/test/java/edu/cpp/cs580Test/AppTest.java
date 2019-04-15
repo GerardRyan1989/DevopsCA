@@ -1,4 +1,4 @@
-package edu.cpp.cs580;
+package edu.cpp.cs580Test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
