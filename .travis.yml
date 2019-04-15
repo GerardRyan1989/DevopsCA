@@ -5,6 +5,8 @@ addons:
 script:
   - mvn sonar:sonar
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Dmaven.test.failure.ignore=false
+  -
 notifications:
   slack: gerardryan1989:gXhuvWuovHTZOAjSLsTxbAjT
-  #email:  gerard.ryan@students.ittralee.ie
+  email:
+  - gerard.ryan@students.ittralee.ie
