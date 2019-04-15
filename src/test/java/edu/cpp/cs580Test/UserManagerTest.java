@@ -1,4 +1,4 @@
-package edu.cpp.cs580Test.data.provider;
+package edu.cpp.cs580Test;
 import edu.cpp.cs580.data.User;
 
 import edu.cpp.cs580.data.UserMap;
