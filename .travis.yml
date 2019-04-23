@@ -2,8 +2,10 @@ language: java
 addons:
   sonarcloud:
     organization: "gerardryan1989-github" #the key of the org you chose at step #3
+    token:
+      secure: "46116e7b35f48f77e3bf42c3835860efa693e487"
 script:
-  - mvn sonar:sonar
+  - sonar-scanner
 notifications:
   slack: gerardryan1989:gXhuvWuovHTZOAjSLsTxbAjT
   email:
