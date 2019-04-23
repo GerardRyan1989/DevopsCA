@@ -15,7 +15,7 @@
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-		<argLine>-Xmx128m</argLine>
+
 		<sonar.language>java</sonar.language>
 	</properties>
 
@@ -120,6 +120,8 @@
 	<reporting>
 		<plugins>
 
+
+
 			<!-- Normally, we take off the dependency report, saves time. -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -144,5 +146,7 @@
 
 		</plugins>
 	</reporting>
+
+
 
 </project>
