@@ -5,8 +5,8 @@ addons:
     token:
       secure: "46116e7b35f48f77e3bf42c3835860efa693e487"
 script:
-  - sonar-scanner
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Dmaven.test.failure.ignore=false
+  #- sonar-scanner
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 notifications:
   slack: gerardryan1989:gXhuvWuovHTZOAjSLsTxbAjT
   email:
