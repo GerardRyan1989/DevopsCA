@@ -54,7 +54,7 @@ public class App {
      * Please note that Spring requires that there is one and
      * ONLY one main method in your whole program. You can create
      * other main methods for testing or debugging purposes, but
-     * you cannot put extra main method when building your project.
+     * yousd cannot put extra main method when building your project.
      */
     public static void main(String[] args) throws Exception {
         // Run Spring Boot
