@@ -73,6 +73,12 @@
 			<version>2.5.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>io.sentry</groupId>
+			<artifactId>sentry</artifactId>
+			<version>1.7.16</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
