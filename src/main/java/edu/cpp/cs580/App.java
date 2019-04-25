@@ -1,12 +1,11 @@
 package edu.cpp.cs580;
 
-
+import io.sentry.spring.SentryServletContextInitializer;
 import io.sentry.Sentry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.context.embedded.ServletContextInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -46,8 +45,8 @@ public class App {
     }
 
     @Bean
-    public ServletContextInitializer sentryServletContextInitializer() {
-        return (ServletContextInitializer) new io.sentry.spring.SentryServletContextInitializer();
+    public SentryServletContextInitializer sentryServletContextInitializer() {
+        return new io.sentry.spring.SentryServletContextInitializer();
     }
 
     /**
