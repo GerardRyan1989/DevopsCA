@@ -1,7 +1,6 @@
 package edu.cpp.cs580;
 
-import io.sentry.spring.SentryServletContextInitializer;
-import io.sentry.Sentry;
+import io.airbrake.javabrake.Notifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +12,7 @@ import edu.cpp.cs580.data.provider.EBayGpsProductManager;
 import edu.cpp.cs580.data.provider.FSUserManager;
 import edu.cpp.cs580.data.provider.GpsProductManager;
 import edu.cpp.cs580.data.provider.UserManager;
-import org.springframework.web.servlet.HandlerExceptionResolver;
+
 
 @Configuration
 @EnableAutoConfiguration
@@ -39,26 +38,20 @@ public class App {
     		return gpsManager;
     }
 
-    @Bean
-    public HandlerExceptionResolver sentryExceptionResolver() {
-        return new io.sentry.spring.SentryExceptionResolver();
-    }
 
-    @Bean
-    public SentryServletContextInitializer sentryServletContextInitializer() {
-        return new io.sentry.spring.SentryServletContextInitializer();
-    }
 
     /**
      * This is the running main method for the web application.
      * Please note that Spring requires that there is one and
      * ONLY one main method in your whole program. You can create
      * other main methods for testing or debugging purposes, but
-     * yousd cannot put extra main method when building your project.
+     * you cannot put extra main method when building your project.
      */
     public static void main(String[] args) throws Exception {
         // Run Spring Boot
         SpringApplication.run(App.class, args);
-        Sentry.init("https://public:private@host:port/1?option=value&other.option=othervalue");
+        int projectId = 224063;
+        String projectKey = "bfb372b2f7403b6fe4e8821340d25bc5";
+        Notifier notifier = new Notifier(projectId, projectKey);
     }
 }

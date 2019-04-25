@@ -74,9 +74,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>io.sentry</groupId>
-			<artifactId>sentry-spring</artifactId>
-			<version>1.7.16</version>
+			<groupId>io.airbrake</groupId>
+			<artifactId>javabrake</artifactId>
+			<version>0.1.6</version>
 		</dependency>
 
 	</dependencies>

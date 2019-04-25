@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.airbrake.javabrake.Notifier;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,7 +15,9 @@ import edu.cpp.cs580.data.GpsProduct;
 public class EBayGpsProductManager implements GpsProductManager {
 
 	public static int[] markers = new int[100];
-
+	int projectId = 224063;
+	String projectKey = "bfb372b2f7403b6fe4e8821340d25bc5";
+	Notifier notifier = new Notifier(projectId, projectKey);
 	@Override
 	public List<GpsProduct> listGps() {
 		List<GpsProduct> gpsProducts = new ArrayList<>();
@@ -57,6 +60,7 @@ public class EBayGpsProductManager implements GpsProductManager {
 			}
 		} catch (IOException e1) {
 			e1.printStackTrace();
+			notifier.report(e1);
 			markers[10] = 1;
 		}
 

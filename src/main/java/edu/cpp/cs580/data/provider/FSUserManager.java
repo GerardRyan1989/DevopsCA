@@ -10,6 +10,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.cpp.cs580.data.User;
 import edu.cpp.cs580.data.UserMap;
 import edu.cpp.cs580.util.ResourceResolver;
+import io.airbrake.javabrake.Notifier;
 
 /**
  * The implementation of {@link UserManager} interface
@@ -31,7 +32,9 @@ public class FSUserManager implements UserManager {
 	 *
 	 */
 	private static final ObjectMapper JSON = new ObjectMapper();
-
+	int projectId = 224063;
+	String projectKey = "bfb372b2f7403b6fe4e8821340d25bc5";
+	Notifier notifier = new Notifier(projectId, projectKey);
 	/**
 	 * Load the user map from the local file.
 	 *
@@ -47,6 +50,7 @@ public class FSUserManager implements UserManager {
 				userMap = JSON.readValue(userFile, UserMap.class);
 			} catch (IOException e) {
 				e.printStackTrace();
+				notifier.report(e);
 			}
 		} else {
 			userMap = new UserMap();
@@ -64,6 +68,7 @@ public class FSUserManager implements UserManager {
 			JSON.writeValue(ResourceResolver.getUserFile(), userMap);
 		} catch (IOException e) {
 			e.printStackTrace();
+			notifier.report(e);
 		}
 	}
 
