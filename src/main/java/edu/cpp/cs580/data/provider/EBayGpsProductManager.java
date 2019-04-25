@@ -53,7 +53,7 @@ public class EBayGpsProductManager implements GpsProductManager {
 
 			for(int i = 0; i < 10; i++) {
 				GpsProduct g = new GpsProduct(
-						elements.get(i).text(),
+						elements.get().text(),
 						elements2.get(i).text(),
 						elements3.get(i).attr("src"));
 				gpsProducts.add(g);
