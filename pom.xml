@@ -73,6 +73,12 @@
 			<version>2.5.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>io.airbrake</groupId>
+			<artifactId>javabrake</artifactId>
+			<version>0.1.6</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
