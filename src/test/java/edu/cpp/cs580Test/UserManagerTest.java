@@ -39,8 +39,8 @@ public class UserManagerTest {
 	@Test
 	public void testUpdateuser(){
 		FSUserManager fs = new FSUserManager();
-		//User user = new User();
-		//fs.updateUser(user);
+		User user = new User();
+		fs.updateUser(user);
 		Assert.assertTrue(true);
 	}
 
