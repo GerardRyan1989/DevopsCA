@@ -10,6 +10,12 @@
 	<name>DevopsCA</name>
 	<url>http://maven.apache.org</url>
 
+	<scm>
+		<connection>scm:git:git@github.com:GerardRyan1989/DevopsCA.git</connection>
+		<developerConnection>scm:git:git@github.com:GerardRyan1989/DevopsCA.git</developerConnection>
+		<url>https://github.com/GerardRyan1989/DevopsCA</url>
+	</scm>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
