@@ -10,18 +10,11 @@
 	<name>DevopsCA</name>
 	<url>http://maven.apache.org</url>
 
-	<scm>
-		<connection>scm:git:git@github.com:GerardRyan1989/DevopsCA.git</connection>
-		<developerConnection>scm:git:git@github.com:GerardRyan1989/DevopsCA.git</developerConnection>
-		<url>https://github.com/GerardRyan1989/DevopsCA</url>
-	</scm>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-
 		<sonar.language>java</sonar.language>
 	</properties>
 
@@ -107,6 +100,14 @@
 				<groupId>org.sonarsource.scanner.maven</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
 				<version>3.4.0.905</version>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>sonar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 			<plugin>
