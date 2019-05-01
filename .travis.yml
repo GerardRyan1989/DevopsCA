@@ -5,6 +5,7 @@ addons:
     token:
       secure: "46116e7b35f48f77e3bf42c3835860efa693e487"
 script:
+  - mvn sonar:scaner
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent org.jacoco:jacoco-maven-plugin:report package sonar:sonar
 notifications:
   slack: gerardryan1989:gXhuvWuovHTZOAjSLsTxbAjT
